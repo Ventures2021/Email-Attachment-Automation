@@ -2,26 +2,6 @@
 
 A Node.js automation service that scans Outlook folders and subfolders, mirrors them into OneDrive, extracts attachments, creates anonymous view-only links, and upserts the corresponding records in a Notion database.
 
-## Easiest workflow
-
-If the full Microsoft Graph and Notion API setup feels too complicated, use the simple local intake instead.
-
-This does not require Azure app registration, Microsoft Graph permissions, a Notion token, or background polling. It creates a Notion-ready CSV from files you already saved into a OneDrive-synced folder.
-
-1. In OneDrive, create the folders you want lenders or partners to see.
-2. Save or drag Outlook attachments into those folders.
-3. Run:
-
-```bash
-npm run simple -- "/path/to/your/OneDrive/Magnolia Homes at Chimes" notion-import.csv
-```
-
-4. Import `notion-import.csv` into Notion or merge it into the Magnolia database.
-5. In OneDrive, create view-only sharing links for the files.
-6. Paste those links into the blank `OneDrive File Link` column in Notion.
-
-The CSV includes document name, folder path, category, file size, SHA-256 hash, and a processing key so you can track what was imported without setting up the full automation.
-
 ## What it does
 
 - Recursively reads configured Outlook folders and their subfolders

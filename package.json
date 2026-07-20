@@ -4,7 +4,6 @@
   "description": "A tool used to streamline organizing documents received via email.",
   "main": "index.js",
   "scripts": {
-    "simple": "node simple-intake.js",
     "start": "node index.js",
     "test": "node --test"
   },
